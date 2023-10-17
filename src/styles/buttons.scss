@@ -1,0 +1,20 @@
+button {
+    border: 0;
+    outline: 0;
+    background-color: none;
+
+    cursor: pointer;
+}
+
+.button-solid {
+    background-color: $main;
+    color: $background;
+    @extend .font_size-highlight;
+    @extend .font_weight-semibold;
+    padding: 30px 35px 30px 35px;
+    border-radius: 100vh;
+}
+
+.button-solid:hover {
+    background-color: $highlight;
+}

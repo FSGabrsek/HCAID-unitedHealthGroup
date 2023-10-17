@@ -1,13 +1,9 @@
 @use 'sass:color';
 
+@import "./styles/variables.scss";
 @import "./styles/reset.scss";
 @import "./styles/text.scss";
-
-$text: #303335;
-
-$background: #FFF;
-$main: #E2441D;
-$highlight: lighten($main, 10);
+@import "./styles/buttons.scss";
 
 html, body {
     width: 100%;
