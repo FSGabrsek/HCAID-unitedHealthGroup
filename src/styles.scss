@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'sass:color';
+
+@import "./styles/reset.scss";
+@import "./styles/text.scss";
+
+$text: #303335;
+
+$background: #FFF;
+$main: #E2441D;
+$highlight: lighten($main, 10);
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $text;
+    background-color: $background
+}
+
+h1 {
+    @extend .font_size-title;
+    @extend .font_weight-bold;
+}
+
+h2 {
+    @extend .font_size-header;
+    @extend .font_weight-bold;
+}
+
+h3 {
+    @extend .font_size-highlight;
+    @extend .font_weight-semibold;
+}
+
+p {
+    @extend .font_size-regular;
+    @extend .font_weight-regular;
+
+    margin-top: 15px;
+}
