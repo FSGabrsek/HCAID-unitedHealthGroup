@@ -1,0 +1,30 @@
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.wrapper {
+    width: 40%;
+}
+
+#back {
+    position: absolute;
+
+    height: 1.5em;
+    right: 20%;
+
+    svg {
+        resize: vertical;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#continue {
+    margin-top: 95px;
+}
