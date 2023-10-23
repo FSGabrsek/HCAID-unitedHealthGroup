@@ -1,7 +1,7 @@
 <div class="container">
     <div class="wrapper">
         <div class="header">
-            <h1>Before we get started</h1>
+            <h1>{{headers[stage]}}</h1>
             <a id="back" routerLink="../home">
                 <svg xmlns="http://www.w3.org/2000/svg" width="27.243" height="27.243" viewBox="0 0 47.243 47.243">
                     <g id="x_1_" data-name="x(1)" transform="translate(-3.699 -3.699)">
@@ -11,16 +11,12 @@
                   </svg>                  
             </a>
         </div>
-        <p>We use an artificial intelligence model to determine whether a person is at risk of suffering from a heart condition. This means that although we strive to be as accurate as possible, we cannot offer medical advice. <span class="font_weight-semibold">If you think your health may be at risk or you are suffering from dangerous symptoms, please consult a medical practitioner.</span></p> 
 
-        <p>You'll be asked to fill in various medical details. We will feed this information into our AI-model and use this to determine if you are at risk of a heart disease. We will not store your personal information or share this with third-parties.</p>
-        
         <p>
-            <input type="checkbox" name="agree" id="agree" [(ngModel)]="isChecked">
-            <label for="agree">I understand and I want to continue</label>
+            <router-outlet></router-outlet>
         </p>
 
-        <button id="continue" class="button-hollow" [disabled]="!isChecked" [routerLink]="'/form'">
+        <button id="continue" class="button-hollow" [routerLink]="'./info'">
             Continue
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17.243" viewBox="0 0 39 35.243">
                 <g id="arrow-right" transform="translate(-3.5 -2.879)">

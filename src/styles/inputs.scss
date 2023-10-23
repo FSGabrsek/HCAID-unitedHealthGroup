@@ -1,0 +1,29 @@
+input {
+    accent-color: $main;
+}
+
+input[type=number], input[type=text] {
+    border: $detail 1px solid;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    @extend .font_size-regular;
+    @extend .font_weight-regular;
+    width: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    min-width: 4ch;
+}
+
+input[type=text] {
+    min-width: 15ch;
+}
