@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationStart, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-form',
@@ -13,15 +13,36 @@ export class PageFormComponent {
         'Your heart under pressure',
         'Some additional questions'
     ]
-    stage!: number;
+    categories = [
+        'personal',
+        'info',
+        'tests',
+        'extra'
+    ]
+    stage!: number
+    header!: string
+    category!: string
 
     constructor(
-        private router: Router
+        private router: Router,
+        private route: ActivatedRoute
     ) {
-
+        this.stage = 0
+        this.header = this.headers[this.stage]
+        this.category = this.categories[this.stage]
     }
 
-    ngOnInit() {
-        this.stage = 0
+    advance() {
+        if (this.stage < 3) {
+            this.stage++
+        }
+        
+        this.header = this.headers[this.stage]
+        this.category = this.categories[this.stage]
+        console.log(this.header);
+
+        console.log(this.route.url);
+    
+        this.router.navigate([this.category], { relativeTo: this.route })
     }
 }
