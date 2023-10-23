@@ -18,8 +18,14 @@
 .header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 #continue {
     margin-top: 95px;
+}
+
+.radiogroup {
+    display: flex;
+    align-items: flex-start;
 }

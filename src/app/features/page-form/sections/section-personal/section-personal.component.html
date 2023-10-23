@@ -1,4 +1,3 @@
-
 <div class="header">
     <h1>Your personal information</h1>
     <a id="back" routerLink="../../home">
@@ -13,11 +12,11 @@
 <div class="wrapper">
     <h3>I am a...</h3>
     <p class="sex">
-        <label>
+        <label class="radiogroup">
             <input type="radio" name="sex" id="man" [value]="1" [(ngModel)]="sex">
             <label for="man">Man</label>
         </label>
-        <label>
+        <label class="radiogroup">
             <input type="radio" name="sex" id="woman" [value]="0" [(ngModel)]="sex">
             <label for="woman">Woman</label>
         </label>
@@ -27,7 +26,7 @@
         <input type="number" placeholder="55" [(ngModel)]="age"> Years old
     </p>
 </div>
-<button id="continue" class="button-hollow" [routerLink]="'../info'" (click)="advance()">
+<button id="continue" class="button-hollow" [routerLink]="'../info'" (click)="advance()" [disabled]="!valid()">
     Continue
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17.243" viewBox="0 0 39 35.243">
         <g id="arrow-right" transform="translate(-3.5 -2.879)">

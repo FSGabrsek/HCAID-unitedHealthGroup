@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./section-extra.component.scss']
 })
 export class SectionExtraComponent {
+    ca!: number
+    thal!: number
+
+    valid(): boolean {
+        return ([0, 1, 2, 3].indexOf(this.ca) > -1) && ([3, 6, 7].indexOf(this.thal) > -1)
+    }
+
     advance() {
         
     }

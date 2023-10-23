@@ -13,51 +13,51 @@
     <h3>I have expererienced...</h3>
     <p class="cp">
         <label>
-            <input type="radio" name="cp" id="typical" value="1">
+            <input type="radio" name="cp" id="typical" [value]="1" [(ngModel)]="cp">
             <label for="typical">A typical angina</label>
         </label>
         <label>
-            <input type="radio" name="cp" id="nontypical" value="2">
+            <input type="radio" name="cp" id="nontypical" [value]="2" [(ngModel)]="cp">
             <label for="nontypical">A non-typical angina</label>
         </label>
         <label>
-            <input type="radio" name="cp" id="other" value="3">
+            <input type="radio" name="cp" id="other" [value]="3" [(ngModel)]="cp">
             <label for="other">A different type of chest pain</label>
         </label>
         <label>
-            <input type="radio" name="cp" id="none" value="4">
+            <input type="radio" name="cp" id="none" [value]="4" [(ngModel)]="cp">
             <label for="none">No chest pain</label>
         </label>
     </p>
     <h3>My resting blood pressure is...</h3>
     <p class="trestbps">
-        <input type="number" placeholder="120"> Hg mm
+        <input type="number" placeholder="120" [(ngModel)]="trestbps"> Hg mm
     </p>
     <h3>My cholesterol is...</h3>
     <p class="chol">
-        <input type="number" placeholder="215"> mg/dl
+        <input type="number" placeholder="215" [(ngModel)]="chol"> mg/dl
     </p>
     <h3>My fasting blood pressure is...</h3>
     <p class="fbs">
-        <label>
-            <input type="radio" name="fbs" id="over" value="1">
+        <label class="radiogroup">
+            <input type="radio" name="fbs" id="over" [value]="1" [(ngModel)]="fbs">
             <label for="over">Over 120 mg/dl</label>
         </label>
-        <label>
-            <input type="radio" name="fbs" id="under" value="0">
+        <label class="radiogroup">
+            <input type="radio" name="fbs" id="under" [value]="0" [(ngModel)]="fbs">
             <label for="under">120  or less mg/dl</label>
         </label>
     </p>
     <h3>The results of my resting electrocardiography are...</h3>
     <p class="restecg">
-        <select name="restecg" id="restecg">
-            <option value="0">Normal</option>
-            <option value="1">Having ST-T wave abnormality</option>
-            <option value="2">Showing probable or definite left ventricular hypertrophy</option>
+        <select name="restecg" id="restecg" [(ngModel)]="restecg">
+            <option [ngValue]="0">Normal</option>
+            <option [ngValue]="1">Having ST-T wave abnormality</option>
+            <option [ngValue]="2">Showing probable or definite left ventricular hypertrophy</option>
         </select>
     </p>
 </div>
-<button id="continue" class="button-hollow" [routerLink]="'../tests'" (click)="advance()">
+<button id="continue" class="button-hollow" [routerLink]="'../tests'" (click)="advance()" [disabled]="!valid()">
     Continue
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17.243" viewBox="0 0 39 35.243">
         <g id="arrow-right" transform="translate(-3.5 -2.879)">

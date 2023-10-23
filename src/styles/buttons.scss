@@ -42,5 +42,6 @@ button:disabled {
 }
 
 .button-hollow:disabled {
+    color: $detail;
     border: $detail $px-s solid;
 }
