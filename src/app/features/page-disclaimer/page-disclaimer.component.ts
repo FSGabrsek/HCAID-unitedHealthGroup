@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-page-disclaimer',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-disclaimer.component.scss']
 })
 export class PageDisclaimerComponent {
-
+    isChecked: boolean = false
 }
