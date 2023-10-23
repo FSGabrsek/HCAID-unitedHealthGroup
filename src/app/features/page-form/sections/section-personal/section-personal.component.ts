@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./section-personal.component.scss']
 })
 export class SectionPersonalComponent {
+    sex!: number
+    age!: number
 
+    advance() {
+        
+    }
 }

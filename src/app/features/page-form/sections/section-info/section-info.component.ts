@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./section-info.component.scss']
 })
 export class SectionInfoComponent {
-
+    advance() {
+        
+    }
 }

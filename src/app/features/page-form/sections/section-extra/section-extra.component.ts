@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./section-extra.component.scss']
 })
 export class SectionExtraComponent {
-
+    advance() {
+        
+    }
 }

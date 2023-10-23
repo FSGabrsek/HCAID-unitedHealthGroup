@@ -1,17 +1,38 @@
+
+<div class="header">
+    <h1>Your personal information</h1>
+    <a id="back" routerLink="../../home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27.243" height="27.243" viewBox="0 0 47.243 47.243">
+            <g id="x_1_" data-name="x(1)" transform="translate(-3.699 -3.699)">
+              <line id="Line_2" data-name="Line 2" x1="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+              <line id="Line_3" data-name="Line 3" x2="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+            </g>
+          </svg>                  
+    </a>
+</div>
 <div class="wrapper">
     <h3>I am a...</h3>
     <p class="sex">
         <label>
-            <input type="radio" name="sex" id="man" value="man" >
+            <input type="radio" name="sex" id="man" [value]="1" [(ngModel)]="sex">
             <label for="man">Man</label>
         </label>
         <label>
-            <input type="radio" name="sex" id="woman" value="woman">
+            <input type="radio" name="sex" id="woman" [value]="0" [(ngModel)]="sex">
             <label for="woman">Woman</label>
         </label>
     </p>
     <h3>My age is...</h3>
     <p class="age">
-        <input type="number" placeholder="55"> Years old
+        <input type="number" placeholder="55" [(ngModel)]="age"> Years old
     </p>
 </div>
+<button id="continue" class="button-hollow" [routerLink]="'../info'" (click)="advance()">
+    Continue
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17.243" viewBox="0 0 39 35.243">
+        <g id="arrow-right" transform="translate(-3.5 -2.879)">
+          <line id="Line_1" data-name="Line 1" x2="35.707" transform="translate(5 21)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="Path_4" data-name="Path 4" d="M12,5,27.5,20.5,12,36" transform="translate(13.5 0)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        </g>
+      </svg>
+</button>

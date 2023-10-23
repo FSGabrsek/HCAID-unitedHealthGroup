@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./section-tests.component.scss']
 })
 export class SectionTestsComponent {
-
+    advance() {
+        
+    }
 }
