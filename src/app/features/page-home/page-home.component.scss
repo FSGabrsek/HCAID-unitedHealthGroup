@@ -1,0 +1,45 @@
+.container {
+    height: 100%;
+    margin: 0 135px 0 135px;
+
+    display: flex;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.content {
+    flex: 1;
+}
+
+.blurb {
+    width: 65%;
+}
+
+.next {
+    margin-top: 50px;
+}
+
+.graphic {
+    flex: 1;
+    resize: horizontal;
+}
+
+#btn_next {
+    margin-top: 35px;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .graphic {
+        display: none;
+    }
+}

@@ -1,0 +1,50 @@
+button {
+    border: 0;
+    outline: 0;
+    background-color: none;
+
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: text;
+}
+
+.button-solid {
+    background-color: $main;
+    color: $background;
+    @extend .font_size-highlight;
+    @extend .font_weight-semibold;
+    padding: 20px 25px 20px 25px;
+    border-radius: 100vh;
+}
+
+.button-solid:hover {
+    background-color: $highlight;
+}
+
+.button-solid:disabled {
+    background-color: $text;
+}
+
+.button-hollow {
+    background-color: transparent;
+    border: $main $px-s solid;
+    color: $text;
+    @extend .font_size-highlight;
+    @extend .font_weight-semibold;
+    padding: 20px 25px 20px 25px;
+    border-radius: 100vh;
+}
+
+.button-hollow:hover {
+    border: $highlight $px-s solid;
+}
+
+.button-hollow:disabled {
+    border: $text $px-s solid;
+}
+
+input {
+    accent-color: $main;
+}
