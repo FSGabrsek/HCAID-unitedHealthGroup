@@ -1,18 +1,27 @@
-
 <div class="container">
-    <div class="wrapper">
-        <div class="content">
-            <h1>How healthy is your heart?</h1>
-            <p class="blurb">Heart diseases are dangerous because they often sneak up without warning signs. They can lead to life-threatening issues like heart attacks or strokes. Regular check-ups and a healthy lifestyle help catch and manage these problems early.</p>
-            <div class="next">
-                <h2>Worried you might be at risk?</h2>
-                <a routerLink="/disclaimer"><button class="button-solid" id="btn_next">Do an online check-up now</button></a>
-            </div>
+    <div class="blocks">
+        <div class="ref">
+            <h1>Healthcare on your terms</h1>
+            <p>New payment solutions build on a history of innovation to help improve affordability.</p>
+            <h3 id="continue">
+                <a [routerLink]="'/disclaimer'">
+                Create your personal care plan 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 36 24">
+                        <path id="Path_23" data-name="Path 23" d="M22,17.5H4v-3H22V4L40,16,22,28Z" transform="translate(-4 -4)"/>
+                    </svg>
+                </a>
+            </h3>
         </div>
-        <div class="graphic">
-            <svg xmlns="http://www.w3.org/2000/svg" width="568.7" height="532" viewBox="0 0 568.7 532">
-                <path id="Path_2" data-name="Path 2" d="M1382,698.022h150.83l19.24-69.1,29.918,144.313,25.412-75.217h29.17l48.617-286.59,33.277,512,40.04-267.949,24.341,42.539H1930.7" transform="translate(-1372 -401.432)" fill="none" stroke="#e2441d" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"/>
-            </svg>
+        <div class="marketing">
+            <h1>Making an impact</h1>
+            <p>We are committed to charting a more sustainable path forward, helping to build a modern, high-performing health system that improves access, affordability, outcomes and experiences for the people who depend on it.</p>
+        </div>
+    </div>
+    <div class="mission-wrapper">
+        <div class="mission">
+            <h4>Our mission</h4>
+            <h3 id="mid-header">United on a journey to improve healthcare</h3>
+            <p>UnitedHealth Group is a health care and well-being company with a mission to help people live healthier lives and help make the health system work better for everyone.</p>
         </div>
     </div>
 </div>

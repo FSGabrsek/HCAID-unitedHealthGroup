@@ -1,45 +1,73 @@
+@import '../../../styles/variables.scss';
+
 .container {
-    height: 100%;
-    margin: 0 135px 0 135px;
-
-    display: flex;
-    align-items: center;
-}
-
-.wrapper {
-    display: flex;
+    background-image: url("../../../assets/home_background.jpg");
+    background-size: cover;
     width: 100%;
+    height: 100%;
 
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
     flex-wrap: wrap;
-    gap: 35px;
 }
 
-.content {
-    flex: 1;
+.blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 20ch;
+
+    margin-inline: 50px;
 }
 
-.blurb {
-    width: 65%;
-}
+.ref {
+    background-color: $background;
+    padding: 25px 45px 45px 45px;
 
-.next {
-    margin-top: 50px;
-}
+    height: fit-content;
 
-.graphic {
-    flex: 1;
-    resize: horizontal;
-}
+    flex: 1.2;
 
-#btn_next {
-    margin-top: 35px;
-}
-
-@media (max-aspect-ratio: 1/1) {
-    .graphic {
-        display: none;
+    p {
+        width: 70%;
     }
+}
+
+#continue {
+    text-decoration: underline;
+
+    a {
+        color: $text;
+    }
+}
+
+.marketing {
+    background-color: $main;
+    color: $background;
+    padding: 25px 45px 45px 45px;
+
+    height: fit-content;
+
+    flex: 1;
+    
+    p {
+        width: 70%;
+    }
+}
+
+.mission-wrapper {
+    background-color: $background;
+}
+
+.mission {
+    margin: 50px 0 50px 130px;
+    max-width: 45%;
+
+    border-left: 5px $main solid;
+    padding-left: 25px
+}
+
+#mid-header {
+    margin-top: 10px;
 }
