@@ -19,23 +19,33 @@ html {
 
 h1 {
     @extend .font_size-title;
-    @extend .font_weight-bold;
+    @extend .font_weight-regular;
 }
 
 h2 {
     @extend .font_size-header;
-    @extend .font_weight-bold;
+    @extend .font_weight-regular;
 }
 
 h3 {
     @extend .font_size-highlight;
-    @extend .font_weight-semibold;
+    @extend .font_weight-regular;
+}
+
+h4 {
+    @extend .font_size-regular;
+    @extend .font_weight-bold;
+}
+
+h5 {
+    @extend .font_size-regular;
+    @extend .font_weight-regular;
 }
 
 p {
     @extend .font_size-regular;
     @extend .font_weight-regular;
 
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 1em;
 }
