@@ -1,24 +1,25 @@
+.wrapper {
+    margin-top: 10px;
+}
+
 .cp {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.fbs {
+.history {
     display: flex;
     flex-direction: row;
     gap: 5ch;
 }
 
-#back{
-    position: absolute;
+.horizontal {
+    display: flex;
+    flex-direction: row;
 
-    height: 1.5em;
-    right: 20%;
+    gap: 2rem;
 
-    svg {
-        resize: vertical;
-    }
 }
 
 .header {
@@ -28,7 +29,7 @@
 }
 
 #continue {
-    margin-top: 95px;
+    margin-top: 65px;
 }
 
 .radiogroup {

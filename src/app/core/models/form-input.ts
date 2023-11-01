@@ -21,12 +21,10 @@ export class form_input {
         this.sex = sex
     }
 
-    set_info(cp: number, trestbpm: number, chol: number, fbs: number, restecg: number) {
+    set_info(cp: number, trestbpm: number, chol: number) {
         this.cp = cp
         this.trestbpm = trestbpm
         this.chol = chol
-        this.fbs = fbs
-        this.restecg = restecg
     }
 
     set_tests(thalach: number, exang: number, oldpeak: number, slope: number) {
