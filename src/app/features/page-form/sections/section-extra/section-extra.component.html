@@ -14,13 +14,13 @@
     <div id="ecgform" *ngIf="ecg">
         <h4>ECG results</h4>
         <h5>Your heart rhythm is</h5>
-        <p class="ecg">
+        <p class="rhythm">
             <label class="radiogroup">
-                <input type="radio" name="ecg" id="reg">
+                <input type="radio" name="rhythm" id="reg">
                 <label for="reg">Regular</label>
             </label>
             <label class="radiogroup">
-                <input type="radio" name="ecg" id="irr">
+                <input type="radio" name="rhythm" id="irr">
                 <label for="irr">Irregular</label>
             </label>
         </p>
@@ -57,7 +57,7 @@
     </p>
     <div id="fluform" *ngIf="flu">
         <h4>Flouroscopy results</h4>
-        <h5>During flouroscopy...</h5>
+        <h5>During flouroscopy:</h5>
         <p class="ca">
             <label class="radiogroup">
                 <input type="radio" name="ca" id="0" [value]="0" [(ngModel)]="ca">
@@ -73,20 +73,20 @@
             </label>
             <label class="radiogroup">
                 <input type="radio" name="ca" id="3" [value]="3" [(ngModel)]="ca">
-                <label for="3">4</label>
+                <label for="3">3</label>
             </label>
             <span>major vessels were colored</span>
         </p>
-        <h5>Does your diaphragmatic breathing show irregularities</h5>
-        <p class="thal">
-            <select name="thal" id="breath">
-                <option value="3">No irregularities</option>
-                <option value="6">Irrefular contraction of the diaphragm</option>
-                <option value="7">Irregular muscle contraction</option>
+        <h5>Does your diaphragmatic breathing show irregularities?</h5>
+        <p class="diaphragm">
+            <select name="diaphragm" id="breath" [(ngModel)]="diaphragm">
+                <option [ngValue]="'none'">No irregularities</option>
+                <option [ngValue]="'diaphragm'">Irregular contraction of the diaphragm</option>
+                <option [ngValue]="'muscle'">Irregular muscle contraction</option>
             </select>
         </p>
     </div>
-    <h5>Have you been diagnosed with Thalassemia</h5>
+    <h5>Have you been diagnosed with Thalassemia?</h5>
     <p class="thal">
         <select name="thal" id="thal" [(ngModel)]="thal">
             <option [ngValue]="3">No Thalassemia</option>
@@ -95,7 +95,7 @@
         </select>
     </p>
 </div>
-<button id="continue" class="button-solid" [routerLink]="''" (click)="advance()">
+<button id="continue" class="button-solid" [routerLink]="'../../results'" (click)="advance()">
     Create my Personal Care Plan
     <svg xmlns="http://www.w3.org/2000/svg" width="12.021" height="12.021" viewBox="0 0 12.021 12.021">
         <path id="Path_24" data-name="Path 24" d="M16,9.414,7.4,18.021,5.983,16.607,14.59,8H7V6H18V17H16Z" transform="translate(-5.983 -6)" fill="color"/>

@@ -8,9 +8,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class SectionExtraComponent {
     ca!: number
-    thal!: number
+    thal = 3
     oldpeak!: number
     slope!: number
+
+    diaphragm = 'none'
 
     ecg!: boolean
     flu!: boolean
