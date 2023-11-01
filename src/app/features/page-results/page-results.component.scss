@@ -1,0 +1,49 @@
+@import '../../../styles.scss';
+
+.container {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.wrapper {
+    width: 55%;
+}
+
+.hero {
+    background-color: $main;
+    color: $background;
+
+    margin: 20px 0 45px 0;
+    padding: 25px 45px 45px 45px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.subhead, #result {
+    text-align: center;
+}
+
+#result {
+    margin: 25px 0 25px 0;
+}
+
+#ref {
+    text-decoration: underline;
+
+    a, path {
+        color: $background;
+        fill: $background;
+    }
+}
+
+#ast {
+    font-size: x-small;
+    color: #DADADA;
+    display: block;
+    position: absolute;
+    bottom: -45px;
+    padding-bottom: 15px;
+}
