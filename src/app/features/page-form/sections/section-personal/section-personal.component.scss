@@ -4,6 +4,18 @@
     gap: 5ch;
 }
 
+.wrapper {
+    margin-top: 10px;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+
+    gap: 2rem;
+
+}
+
 #back{
     position: absolute;
 
@@ -22,7 +34,7 @@
 }
 
 #continue {
-    margin-top: 95px;
+    margin-top: 65px;
 }
 
 .radiogroup {

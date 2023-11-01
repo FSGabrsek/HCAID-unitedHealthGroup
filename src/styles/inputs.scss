@@ -2,10 +2,9 @@ input {
     accent-color: $main;
 }
 
-input[type=number], input[type=text] {
+input[type=number], input[type=text], input[type=email] {
     border: $detail 1px solid;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     @extend .font_size-regular;
     @extend .font_weight-regular;
@@ -26,4 +25,12 @@ input[type=number] {
 
 input[type=text] {
     min-width: 15ch;
+}
+
+.long {
+    min-width: 25ch !important;
+}
+
+.longer {
+    min-width: 35ch !important;
 }

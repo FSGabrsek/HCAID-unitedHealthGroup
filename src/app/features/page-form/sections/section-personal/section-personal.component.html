@@ -1,37 +1,62 @@
-<div class="header">
-    <h1>Your personal information</h1>
-    <a id="back" routerLink="../../home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="27.243" height="27.243" viewBox="0 0 47.243 47.243">
-            <g id="x_1_" data-name="x(1)" transform="translate(-3.699 -3.699)">
-              <line id="Line_2" data-name="Line 2" x1="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-              <line id="Line_3" data-name="Line 3" x2="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-            </g>
-          </svg>                  
-    </a>
-</div>
+<h1>Personal information</h1>
 <div class="wrapper">
-    <h3>I am a...</h3>
-    <p class="sex">
-        <label class="radiogroup">
-            <input type="radio" name="sex" id="man" [value]="1" [(ngModel)]="sex">
-            <label for="man">Man</label>
-        </label>
-        <label class="radiogroup">
-            <input type="radio" name="sex" id="woman" [value]="0" [(ngModel)]="sex">
-            <label for="woman">Woman</label>
-        </label>
-    </p>
-    <h3>My age is...</h3>
+    <div class="horizontal">
+    <div>
+        <h5>Full name</h5>
+        <p>
+            <input type="text" name="" id="" placeholder="e.g. John Reynolds" [(ngModel)]="name">
+        </p>
+    </div>
+    <div>
+        <h5>Gender</h5>
+        <p class="sex">
+            <label class="radiogroup">
+                <input type="radio" name="sex" id="man" [value]="1" [(ngModel)]="sex">
+                <label for="man">Man</label>
+            </label>
+            <label class="radiogroup">
+                <input type="radio" name="sex" id="woman" [value]="0" [(ngModel)]="sex">
+                <label for="woman">Woman</label>
+            </label>
+        </p>
+    </div>
+    </div>
+    <h5>Age</h5>
     <p class="age">
-        <input type="number" placeholder="55" [(ngModel)]="age"> Years old
+        <input type="number" placeholder="52" [(ngModel)]="age"> Years old
     </p>
+    <div class="horizontal">
+        <div>
+            <h5>Email-address</h5>
+            <p>
+                <input type="email" class="long" name="" id="" placeholder="e.g. j.reynolds@uhg.com" [(ngModel)]="email">
+            </p>
+        </div>
+        <div>
+            <h5>Telephone number</h5>
+            <p>
+                <input type="text" class="long" name="" id="" placeholder="e.g. (651) - 555 - 1234" [(ngModel)]="tel">
+            </p>
+        </div>
+    </div>
+    <div class="horizontal">
+        <div>
+            <h5>Address</h5>
+            <p>
+                <input type="email" class="longer" name="" id="" placeholder="e.g. 123 Maple Street, Minneapolis" [(ngModel)]="address">
+            </p>
+        </div>
+        <div>
+            <h5>Zip code</h5>
+            <p>
+                <input type="text" name="" id="" placeholder="e.g. MN 55401" [(ngModel)]="zip">
+            </p>
+        </div>
+    </div>
 </div>
 <button id="continue" class="button-hollow" [routerLink]="'../info'" (click)="advance()" [disabled]="!valid()">
     Continue
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17.243" viewBox="0 0 39 35.243">
-        <g id="arrow-right" transform="translate(-3.5 -2.879)">
-          <line id="Line_1" data-name="Line 1" x2="35.707" transform="translate(5 21)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <path id="Path_4" data-name="Path 4" d="M12,5,27.5,20.5,12,36" transform="translate(13.5 0)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-        </g>
-      </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12.021" height="12.021" viewBox="0 0 12.021 12.021">
+        <path id="Path_24" data-name="Path 24" d="M16,9.414,7.4,18.021,5.983,16.607,14.59,8H7V6H18V17H16Z" transform="translate(-5.983 -6)" fill="color"/>
+    </svg>
 </button>
