@@ -8,6 +8,7 @@ import { SectionInfoComponent } from './features/page-form/sections/section-info
 import { SectionTestsComponent } from './features/page-form/sections/section-tests/section-tests.component';
 import { SectionExtraComponent } from './features/page-form/sections/section-extra/section-extra.component';
 import { PageOnboardingComponent } from './features/page-onboarding/page-onboarding.component';
+import { SectionAidComponent } from './features/page-form/sections/section-aid/section-aid.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'prefix' },
@@ -18,6 +19,7 @@ const routes: Routes = [
         { path: 'personal', component: SectionPersonalComponent },
         { path: 'info', component: SectionInfoComponent },
         { path: 'tests', component: SectionTestsComponent },
+        { path: 'aid', component: SectionAidComponent },
         { path: 'extra', component: SectionExtraComponent },
         ]
     },

@@ -15,16 +15,16 @@ export class DataService {
         this.formdata.set_personal(age, sex)
     }
 
-    save_info(cp: number, trestbpm: number, chol: number, fbs: number, restecg: number) {
-        this.formdata.set_info(cp, trestbpm, chol, fbs, restecg)
+    save_info(cp: number, trestbpm: number, chol: number) {
+        this.formdata.set_info(cp, trestbpm, chol)
     }
 
-    save_tests(thalach: number, exang: number, oldpeak: number, slope: number) {
-        this.formdata.set_tests(thalach, exang, oldpeak, slope)
+    save_tests(thalach: number, exang: number) {
+        this.formdata.set_tests(thalach, exang)
     }
 
-    save_extra(ca: number, thal: number) {
-        this.formdata.set_extra(ca, thal)
+    save_extra(oldpeak: number, slope: number, ca: number, thal: number) {
+        this.formdata.set_extra(oldpeak, slope, ca, thal)
     }
 
     clear() {

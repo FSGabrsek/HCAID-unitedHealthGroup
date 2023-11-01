@@ -1,28 +1,21 @@
-.exang, .slope {
+.ex {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.smoke {
     display: flex;
     flex-direction: row;
     gap: 5ch;
 }
 
-#back{
-    position: absolute;
-
-    height: 1.5em;
-    right: 20%;
-
-    svg {
-        resize: vertical;
-    }
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+.wrapper {
+    margin-top: 10px;
 }
 
 #continue {
-    margin-top: 95px;
+    margin-top: 65px;
 }
 
 .radiogroup {

@@ -1,17 +1,13 @@
-.ecg, .flu, .exang, .slope {
+.allergy {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.vision, .hearing, .vac, .mental {
     display: flex;
     flex-direction: row;
     gap: 5ch;
-}
-
-.ca {
-    display: flex;
-    flex-direction: row;
-    gap: 5ch;
-}
-
-h4 {
-    margin-bottom: 10px;
 }
 
 .wrapper {

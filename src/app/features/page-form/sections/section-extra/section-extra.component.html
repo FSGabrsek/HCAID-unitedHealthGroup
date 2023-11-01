@@ -1,36 +1,92 @@
-<div class="header">
-    <h1>Some additional questions</h1>
-    <a id="back" routerLink="../../home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="27.243" height="27.243" viewBox="0 0 47.243 47.243">
-            <g id="x_1_" data-name="x(1)" transform="translate(-3.699 -3.699)">
-              <line id="Line_2" data-name="Line 2" x1="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-              <line id="Line_3" data-name="Line 3" x2="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-            </g>
-          </svg>                  
-    </a>
-</div>
+<h1>Your medical documents</h1>
 <div class="wrapper">
-    <h3>During flouroscopy...</h3>
-    <p class="ca">
+    <h5>Have you undergone an Electrocardiography (ECG) exam</h5>
+    <p class="ecg">
         <label class="radiogroup">
-            <input type="radio" name="ca" id="0" [value]="0" [(ngModel)]="ca">
-            <label for="0">0</label>
+            <input type="radio" name="ecg" id="egcyes" [value]="false" [(ngModel)]="ecg">
+            <label for="egcyes">No</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="ca" id="1" [value]="1" [(ngModel)]="ca">
-            <label for="1">1</label>
+            <input type="radio" name="ecg" id="egcno" [value]="true" [(ngModel)]="ecg">
+            <label for="egcno">Yes</label>
         </label>
-        <label class="radiogroup">
-            <input type="radio" name="ca" id="2" [value]="2" [(ngModel)]="ca">
-            <label for="2">2</label>
-        </label>
-        <label class="radiogroup">
-            <input type="radio" name="ca" id="3" [value]="3" [(ngModel)]="ca">
-            <label for="3">4</label>
-        </label>
-        <span>major vessels were colored</span>
     </p>
-    <h3>I have been diagnosed with...</h3>
+    <div id="ecgform" *ngIf="ecg">
+        <h4>ECG results</h4>
+        <h5>Your heart rhythm is</h5>
+        <p class="ecg">
+            <label class="radiogroup">
+                <input type="radio" name="ecg" id="reg">
+                <label for="reg">Regular</label>
+            </label>
+            <label class="radiogroup">
+                <input type="radio" name="ecg" id="irr">
+                <label for="irr">Irregular</label>
+            </label>
+        </p>
+        <h5>Your ST depression during excersise</h5>
+        <p class="oldpeak">
+            <input type="number" name="oldpeak" id="oldpeak" placeholder="0.8" [(ngModel)]="oldpeak"> greater relative to rest
+        </p>
+        <h5>The slope of your ST segment during excersise</h5>
+        <p class="slope">
+            <label class="radiogroup">
+                <input type="radio" name="slope" id="up" [value]="1" [(ngModel)]="slope">
+                <label for="up">Upsloping</label>
+            </label>
+            <label class="radiogroup">
+                <input type="radio" name="slope" id="flat" [value]="2" [(ngModel)]="slope">
+                <label for="flat">Flat</label>
+            </label>
+            <label class="radiogroup">
+                <input type="radio" name="slope" id="down" [value]="3" [(ngModel)]="slope">
+                <label for="down">Downsloping</label>
+            </label>
+        </p>
+    </div>
+    <h5>Have you undergone a Flouroscopy exam</h5>
+    <p class="flu">
+        <label class="radiogroup">
+            <input type="radio" name="flu" id="fluyes" [value]="false" [(ngModel)]="flu">
+            <label for="fluyes">No</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="flu" id="fluno" [value]="true" [(ngModel)]="flu">
+            <label for="fluno">Yes</label>
+        </label>
+    </p>
+    <div id="fluform" *ngIf="flu">
+        <h4>Flouroscopy results</h4>
+        <h5>During flouroscopy...</h5>
+        <p class="ca">
+            <label class="radiogroup">
+                <input type="radio" name="ca" id="0" [value]="0" [(ngModel)]="ca">
+                <label for="0">0</label>
+            </label>
+            <label class="radiogroup">
+                <input type="radio" name="ca" id="1" [value]="1" [(ngModel)]="ca">
+                <label for="1">1</label>
+            </label>
+            <label class="radiogroup">
+                <input type="radio" name="ca" id="2" [value]="2" [(ngModel)]="ca">
+                <label for="2">2</label>
+            </label>
+            <label class="radiogroup">
+                <input type="radio" name="ca" id="3" [value]="3" [(ngModel)]="ca">
+                <label for="3">4</label>
+            </label>
+            <span>major vessels were colored</span>
+        </p>
+        <h5>Does your diaphragmatic breathing show irregularities</h5>
+        <p class="thal">
+            <select name="thal" id="breath">
+                <option value="3">No irregularities</option>
+                <option value="6">Irrefular contraction of the diaphragm</option>
+                <option value="7">Irregular muscle contraction</option>
+            </select>
+        </p>
+    </div>
+    <h5>Have you been diagnosed with Thalassemia</h5>
     <p class="thal">
         <select name="thal" id="thal" [(ngModel)]="thal">
             <option [ngValue]="3">No Thalassemia</option>
@@ -39,12 +95,9 @@
         </select>
     </p>
 </div>
-<button id="continue" class="button-hollow" [routerLink]="''" (click)="advance()" [disabled]="!valid()">
-    Continue
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17.243" viewBox="0 0 39 35.243">
-        <g id="arrow-right" transform="translate(-3.5 -2.879)">
-          <line id="Line_1" data-name="Line 1" x2="35.707" transform="translate(5 21)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <path id="Path_4" data-name="Path 4" d="M12,5,27.5,20.5,12,36" transform="translate(13.5 0)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-        </g>
-      </svg>
+<button id="continue" class="button-solid" [routerLink]="''" (click)="advance()">
+    Create my Personal Care Plan
+    <svg xmlns="http://www.w3.org/2000/svg" width="12.021" height="12.021" viewBox="0 0 12.021 12.021">
+        <path id="Path_24" data-name="Path 24" d="M16,9.414,7.4,18.021,5.983,16.607,14.59,8H7V6H18V17H16Z" transform="translate(-5.983 -6)" fill="color"/>
+    </svg>
 </button>

@@ -1,0 +1,80 @@
+<h1>Your wellness essentials</h1>
+<div class="wrapper">
+    <h5>Do you require vision aids?</h5>
+    <p class="vision">
+        <label class="radiogroup">
+            <input type="radio" name="vision" id="1">
+            <label for="1">I wear glasses</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="vision" id="2">
+            <label for="2">I wear contact lenses</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="vision" id="3">
+            <label for="3">No</label>
+        </label>
+    </p>
+    <h5>Do you require hearing aids?</h5>
+    <p class="hearing">
+        <label class="radiogroup">
+            <input type="radio" name="vision" id="yes">
+            <label for="yes">Yes</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="vision" id="yes">
+            <label for="no">No</label>
+        </label>
+    </p>
+    <h5>Do you have any of the following allergies? (check all that apply)</h5>
+    <p class="allergy">
+        <label>
+            <input type="checkbox" name="allergy" id="pol">
+            <label for="pol">Pollen allergy (Hay fever)</label>
+        </label>
+        <label>
+            <input type="checkbox" name="allergy" id="pet">
+            <label for="pet">Pet allergy</label>
+        </label>
+        <label>
+            <input type="checkbox" name="allergy" id="food">
+            <label for="food">Food allergy</label>
+        </label>
+        <label>
+            <input type="checkbox" name="allergy" id="insect">
+            <label for="insect">Insect sting allergy</label>
+        </label>
+        <label>
+            <input type="checkbox" name="allergy" id="drug">
+            <label for="drug">Drug allergy</label>
+        </label>
+    </p>
+    <h5>Are your vaccinations up to date, including flu shots and other recommended vaccines?</h5>
+    <p class="vac">
+        <label class="radiogroup">
+            <input type="radio" name="vac" id="yes">
+            <label for="yes">Yes</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="vac" id="yes">
+            <label for="no">No</label>
+        </label>
+    </p>
+    <h5>Are you currently seeking therapy or counseling services?</h5>
+    <p class="mental">
+        <label class="radiogroup">
+            <input type="radio" name="mental" id="yes">
+            <label for="yes">Yes</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="mental" id="yes">
+            <label for="no">No</label>
+        </label>
+    </p>
+</div>
+<button id="continue" class="button-hollow" [routerLink]="'../extra'">
+    Continue
+    <svg xmlns="http://www.w3.org/2000/svg" width="12.021" height="12.021" viewBox="0 0 12.021 12.021">
+        <path id="Path_24" data-name="Path 24" d="M16,9.414,7.4,18.021,5.983,16.607,14.59,8H7V6H18V17H16Z" transform="translate(-5.983 -6)" fill="color"/>
+    </svg>
+</button>

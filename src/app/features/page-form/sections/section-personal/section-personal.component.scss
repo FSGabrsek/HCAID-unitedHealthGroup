@@ -4,25 +4,20 @@
     gap: 5ch;
 }
 
-#back{
-    position: absolute;
-
-    height: 1.5em;
-    right: 20%;
-
-    svg {
-        resize: vertical;
-    }
+.wrapper {
+    margin-top: 10px;
 }
 
-.header {
+.horizontal {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+    flex-direction: row;
+
+    gap: 2rem;
+
 }
 
 #continue {
-    margin-top: 95px;
+    margin-top: 65px;
 }
 
 .radiogroup {

@@ -4,8 +4,6 @@ export class form_input {
     public cp!: number
     public trestbpm!: number
     public chol!: number
-    public fbs!: number
-    public restecg!: number
     public thalach!: number
     public exang!: number
     public oldpeak!: number
@@ -21,29 +19,27 @@ export class form_input {
         this.sex = sex
     }
 
-    set_info(cp: number, trestbpm: number, chol: number, fbs: number, restecg: number) {
+    set_info(cp: number, trestbpm: number, chol: number) {
         this.cp = cp
         this.trestbpm = trestbpm
         this.chol = chol
-        this.fbs = fbs
-        this.restecg = restecg
     }
 
-    set_tests(thalach: number, exang: number, oldpeak: number, slope: number) {
+    set_tests(thalach: number, exang: number) {
         this.thalach = thalach
         this.exang = exang
-        this.oldpeak = oldpeak
-        this.slope = slope
     }
 
-    set_extra(ca: number, thal: number) {
+    set_extra(oldpeak: number, slope: number, ca: number, thal: number) {
+        this.oldpeak = oldpeak
+        this.slope = slope
         this.ca = ca
         this.thal = thal
     }
 
     
     public get valid() : boolean {
-        return (Object.values(this).length == 13) && !(Object.values(this).includes(undefined))
+        return (Object.values(this).length == 11) && !(Object.values(this).includes(undefined))
     }
     
 }
