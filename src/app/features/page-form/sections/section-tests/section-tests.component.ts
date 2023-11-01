@@ -24,6 +24,5 @@ export class SectionTestsComponent {
         }
 
         this.dataservice.save_tests(this.thalach, this.exang)
-        console.log(this.dataservice.valid);
     }
 }
