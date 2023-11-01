@@ -13,35 +13,53 @@ button:disabled {
 .button-solid {
     background-color: $main;
     color: $background;
-    @extend .font_size-highlight;
-    @extend .font_weight-semibold;
-    padding: 20px 25px 20px 25px;
-    border-radius: 100vh;
+    @extend .font_size-regular;
+    @extend .font_weight-bold;
+    padding: 15px 20px 15px 20px;
+
+    path {
+        fill: $background
+    }
 }
 
 .button-solid:hover {
     background-color: $highlight;
+
+    path {
+        fill: $background
+    }
 }
 
 .button-solid:disabled {
-    background-color: $text;
+    background-color: $detail;
 }
 
 .button-hollow {
     background-color: transparent;
     border: $main $px-s solid;
-    color: $text;
-    @extend .font_size-highlight;
-    @extend .font_weight-semibold;
-    padding: 20px 25px 20px 25px;
-    border-radius: 100vh;
+    color: $main;
+    @extend .font_size-regular;
+    @extend .font_weight-bold;
+    padding: 15px 20px 15px 20px;
+
+    path {
+        fill: $main
+    }
 }
 
 .button-hollow:hover {
     border: $highlight $px-s solid;
+
+    path {
+        fill: $highlight
+    }
 }
 
 .button-hollow:disabled {
     color: $detail;
     border: $detail $px-s solid;
+
+    path {
+        fill: $detail
+    }
 }

@@ -1,12 +1,18 @@
 .container {
-    margin-top: 100px;
+    margin-top: 35px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
 .wrapper {
-    width: 40%;
+    width: 55%;
+}
+
+#tos {
+    max-height: 55vh;
+    overflow: scroll;
+    margin-top: 10px;
 }
 
 #back {
@@ -26,5 +32,5 @@
 }
 
 #continue {
-    margin-top: 200px;
+    margin-top: 30px;
 }
