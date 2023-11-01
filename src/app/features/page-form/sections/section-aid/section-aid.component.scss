@@ -1,0 +1,30 @@
+.allergy {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.vision, .hearing, .vac, .mental {
+    display: flex;
+    flex-direction: row;
+    gap: 5ch;
+}
+
+.wrapper {
+    margin-top: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#continue {
+    margin-top: 65px;
+}
+
+.radiogroup {
+    display: flex;
+    align-items: flex-start;
+}
