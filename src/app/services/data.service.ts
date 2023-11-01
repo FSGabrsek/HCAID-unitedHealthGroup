@@ -23,8 +23,8 @@ export class DataService {
         this.formdata.set_tests(thalach, exang)
     }
 
-    save_extra(ca: number, thal: number) {
-        this.formdata.set_extra(ca, thal)
+    save_extra(oldpeak: number, slope: number, ca: number, thal: number) {
+        this.formdata.set_extra(oldpeak, slope, ca, thal)
     }
 
     clear() {

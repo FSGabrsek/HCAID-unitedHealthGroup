@@ -1,4 +1,4 @@
-.exang, .slope, .smoke {
+.ecg, .flu, .exang, .slope {
     display: flex;
     flex-direction: row;
     gap: 5ch;
@@ -10,25 +10,16 @@
     gap: 5ch;
 }
 
-#back{
-    position: absolute;
-
-    height: 1.5em;
-    right: 20%;
-
-    svg {
-        resize: vertical;
-    }
+h4 {
+    margin-bottom: 10px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+.wrapper {
+    margin-top: 10px;
 }
 
 #continue {
-    margin-top: 95px;
+    margin-top: 65px;
 }
 
 .radiogroup {

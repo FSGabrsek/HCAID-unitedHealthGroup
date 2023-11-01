@@ -30,14 +30,16 @@ export class form_input {
         this.exang = exang
     }
 
-    set_extra(ca: number, thal: number) {
+    set_extra(oldpeak: number, slope: number, ca: number, thal: number) {
+        this.oldpeak = oldpeak
+        this.slope = slope
         this.ca = ca
         this.thal = thal
     }
 
     
     public get valid() : boolean {
-        return (Object.values(this).length == 13) && !(Object.values(this).includes(undefined))
+        return (Object.values(this).length == 11) && !(Object.values(this).includes(undefined))
     }
     
 }
