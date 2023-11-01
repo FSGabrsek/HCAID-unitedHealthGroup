@@ -3,16 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    margin-bottom: 25px;
 }
 
 .wrapper {
     width: 55%;
-}
-
-#tos {
-    max-height: 55vh;
-    overflow: scroll;
-    margin-top: 10px;
 }
 
 #continue {

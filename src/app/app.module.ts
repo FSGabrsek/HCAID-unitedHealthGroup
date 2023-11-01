@@ -12,6 +12,7 @@ import { SectionInfoComponent } from './features/page-form/sections/section-info
 import { SectionTestsComponent } from './features/page-form/sections/section-tests/section-tests.component';
 import { SectionExtraComponent } from './features/page-form/sections/section-extra/section-extra.component';
 import { HeaderComponent } from './core/components/header/header.component';
+import { PageOnboardingComponent } from './features/page-onboarding/page-onboarding.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HeaderComponent } from './core/components/header/header.component';
     SectionTestsComponent,
     SectionExtraComponent,
     HeaderComponent,
+    PageOnboardingComponent,
   ],
   imports: [
     BrowserModule,

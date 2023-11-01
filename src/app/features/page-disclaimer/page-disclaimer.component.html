@@ -1,33 +1,38 @@
 <div class="container">
     <div class="wrapper">
-        <div class="header">
-            <h1>Before we get started</h1>
-            <a id="back" routerLink="../home">
-                <svg xmlns="http://www.w3.org/2000/svg" width="27.243" height="27.243" viewBox="0 0 47.243 47.243">
-                    <g id="x_1_" data-name="x(1)" transform="translate(-3.699 -3.699)">
-                      <line id="Line_2" data-name="Line 2" x1="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-                      <line id="Line_3" data-name="Line 3" x2="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-                    </g>
-                  </svg>                  
-            </a>
+        <h1>Health insurance for your needs</h1>
+        <div id="tos">
+            <h4>UNITEDHEALTHCARE END-USER LICENSE AGREEMENT (EULA)</h4>
+            <p>This UnitedHealthcare End-User License Agreement ("EULA") is a legal agreement between you, the end-user, and UnitedHealth Group, Inc. ("Licensor"), the developer and owner of the UnitedHealthcare software and services (collectively, the "Software") being licensed to you. By installing, downloading, or using the UnitedHealthcare Software, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install, download, or use the UnitedHealthcare Software.</p>
+            <h4>License Grant</h4>
+            <p>Licensor grants you a personal, non-exclusive, non-transferable, and revocable license to use the UnitedHealthcare Software solely for your personal and non-commercial use in accordance with the terms and conditions of this EULA.</p>
+            <h4>Ownership and Intellectual Property</h4>
+            <p>The UnitedHealthcare Software is licensed, not sold, and Licensor retains all rights, title, and interest in and to the Software, including all copyrights, trademarks, and other intellectual property rights. You agree not to modify, adapt, translate, reverse engineer, decompile, or disassemble the UnitedHealthcare Software.</p>
+            <h4>Data Collection and Privacy</h4>
+            <p>You acknowledge and agree that the UnitedHealthcare Software may collect and transmit data, including personal information, to Licensor. Licensor will handle such data in accordance with its Privacy Policy. By using the UnitedHealthcare Software, you consent to the collection, use, and transmission of your data as described in the Privacy Policy.</p>
+            <h4>Updates and Support</h4>
+            <p>Licensor may provide updates, modifications, or support for the UnitedHealthcare Software at its discretion. This EULA shall apply to any updates or modifications unless such updates are accompanied by a separate license agreement. Licensor is not obligated to provide support for the UnitedHealthcare Software.</p>
+            <h4>Termination</h4>
+            <p>This EULA is effective until terminated. You may terminate it at any time by formally sending the Licensor a request for termination of use of the UnitedHealthcare Software. Licensor may terminate this EULA if you fail to comply with its terms. Upon termination, you must cease using the UnitedHealthcare Software and destroy all copies in your possession.</p>
+            <h4>Disclaimers</h4>
+            <p>The UnitedHealthcare Software is provided "as is," without any warranties or guarantees. Licensor disclaims all warranties, express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose.</p>
+            <h4>Limitation of Liability</h4>
+            <p>In no event shall Licensor be liable for any consequential, special, indirect, or incidental damages, including but not limited to lost profits or data, arising out of or related to the use of or inability to use the UnitedHealthcare Software.</p>
+            <h4>Governing Law</h4>
+            <p>This EULA is governed by and construed in accordance with the laws of your country of residence, without regard to its conflict of law principles.</p>
+            <h4>Entire Agreement</h4>
+            <p>This EULA constitutes the entire agreement between you and Licensor regarding the UnitedHealthcare Software and supersedes all prior or contemporaneous agreements, understandings, and communications, whether oral or written.</p>
         </div>
-        <p>We use an artificial intelligence model to determine whether a person is at risk of suffering from a heart condition. This means that although we strive to be as accurate as possible, we cannot offer medical advice. <span class="font_weight-semibold">If you think your health may be at risk or you are suffering from dangerous symptoms, please consult a medical practitioner.</span></p> 
-
-        <p>You'll be asked to fill in various medical details. We will feed this information into our AI-model and use this to determine if you are at risk of a heart disease. We will not store your personal information or share this with third-parties.</p>
-        
         <p>
             <input type="checkbox" name="agree" id="agree" [(ngModel)]="isChecked">
-            <label for="agree">I understand and I want to continue</label>
+            <label for="agree">I agree to the terms of service</label>
         </p>
 
-        <button id="continue" class="button-hollow" [disabled]="!isChecked" [routerLink]="'/form'">
+        <button id="continue" class="button-solid" [disabled]="!isChecked" [routerLink]="'/onboarding'">
             Continue
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17.243" viewBox="0 0 39 35.243">
-                <g id="arrow-right" transform="translate(-3.5 -2.879)">
-                  <line id="Line_1" data-name="Line 1" x2="35.707" transform="translate(5 21)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-                  <path id="Path_4" data-name="Path 4" d="M12,5,27.5,20.5,12,36" transform="translate(13.5 0)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-                </g>
-              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12.021" height="12.021" viewBox="0 0 12.021 12.021">
+                <path id="Path_24" data-name="Path 24" d="M16,9.414,7.4,18.021,5.983,16.607,14.59,8H7V6H18V17H16Z" transform="translate(-5.983 -6)" fill="color"/>
+            </svg>
         </button>
     </div>
 </div>
