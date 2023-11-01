@@ -3,23 +3,23 @@
     <h5>How often do you excersise?</h5>
     <p class="ex">
         <label class="radiogroup">
-            <input type="radio" name="exang" id="1">
+            <input type="radio" name="ex" id="1">
             <label for="1">Every day</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="exang" id="2">
+            <input type="radio" name="ex" id="2">
             <label for="2">Multiple time a week</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="exang" id="3">
+            <input type="radio" name="ex" id="3">
             <label for="3">Once a week</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="exang" id="4">
+            <input type="radio" name="ex" id="4">
             <label for="4">Once a month</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="exang" id="4">
+            <input type="radio" name="ex" id="4">
             <label for="4">Less than once a month</label>
         </label>
     </p>
@@ -27,15 +27,15 @@
     <p class="thalach">
         <input type="number" name="thalach" id="thalach" placeholder="133" [(ngModel)]="thalach"> bpm
     </p>
-    <h5>Have you experienced chest pains while excercising</h5>
+    <h5>Have you experienced chest pains while excercising?</h5>
     <p class="exang">
         <label class="radiogroup">
-            <input type="radio" name="exang" id="yes" [value]="1" [(ngModel)]="exang">
-            <label for="yes">Yes</label>
+            <input type="radio" name="exang" id="exyes" [value]="1" [(ngModel)]="exang">
+            <label for="exyes">Yes</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="exang" id="no" [value]="0" [(ngModel)]="exang">
-            <label for="no">No</label>
+            <input type="radio" name="exang" id="exno" [value]="0" [(ngModel)]="exang">
+            <label for="exno">No</label>
         </label>
     </p>
     <h5>How much water do drink regularly?</h5>
@@ -45,16 +45,16 @@
     <h5>Do you smoke?</h5>
     <p class="smoke">
         <label class="radiogroup">
-            <input type="radio" name="smoke" id="yes">
-            <label for="yes">Yes</label>
+            <input type="radio" name="smoke" id="smokeyes">
+            <label for="smokeyes">Yes</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="smoke" id="no">
-            <label for="no">No</label>
+            <input type="radio" name="smoke" id="smokeno">
+            <label for="smokeno">No</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="smoke" id="past">
-            <label for="past">I have quit smoking</label>
+            <input type="radio" name="smoke" id="smokepast">
+            <label for="smokepast">I have quit smoking</label>
         </label>
     </p>
     <h5>How much alcohol do you consume?</h5>

@@ -8,9 +8,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class SectionExtraComponent {
     ca!: number
-    thal!: number
+    thal = 3
     oldpeak!: number
     slope!: number
+
+    diaphragm = 'none'
 
     ecg!: boolean
     flu!: boolean
@@ -41,8 +43,5 @@ export class SectionExtraComponent {
         }
 
         this.dataservice.save_extra(this.oldpeak, this.slope, this.ca, this.thal)
-        console.log(this.dataservice.valid);
-        
-        this.dataservice.clear()
     }
 }
