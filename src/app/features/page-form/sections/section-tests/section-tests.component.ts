@@ -9,19 +9,21 @@ import { DataService } from 'src/app/services/data.service';
 export class SectionTestsComponent {
     thalach!: number
     exang!: number
-    oldpeak!: number
-    slope!: number
 
     constructor(private dataservice: DataService) {
 
     }
 
-    valid(): boolean {
-        return (this.thalach > 0) && ([1, 0].indexOf(this.exang) > -1) && (this.oldpeak >= 0) && ([1, 2, 3].indexOf(this.slope) > -1)
-    }
-
     advance() {
-        this.dataservice.save_tests(this.thalach, this.exang, this.oldpeak, this.slope)
+        if (!(this.thalach > 0)) {
+            this.thalach = 150
+        }
+
+        if (!([1, 0].indexOf(this.exang) > -1)) {
+            this.exang = 0
+        }
+
+        this.dataservice.save_tests(this.thalach, this.exang)
         console.log(this.dataservice.valid);
     }
 }

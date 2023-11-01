@@ -4,8 +4,6 @@ export class form_input {
     public cp!: number
     public trestbpm!: number
     public chol!: number
-    public fbs!: number
-    public restecg!: number
     public thalach!: number
     public exang!: number
     public oldpeak!: number
@@ -27,11 +25,9 @@ export class form_input {
         this.chol = chol
     }
 
-    set_tests(thalach: number, exang: number, oldpeak: number, slope: number) {
+    set_tests(thalach: number, exang: number) {
         this.thalach = thalach
         this.exang = exang
-        this.oldpeak = oldpeak
-        this.slope = slope
     }
 
     set_extra(ca: number, thal: number) {

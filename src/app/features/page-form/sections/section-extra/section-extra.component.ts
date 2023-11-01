@@ -9,13 +9,15 @@ import { DataService } from 'src/app/services/data.service';
 export class SectionExtraComponent {
     ca!: number
     thal!: number
+    oldpeak!: number
+    slope!: number
 
     constructor(private dataservice: DataService) {
 
     }
 
     valid(): boolean {
-        return ([0, 1, 2, 3].indexOf(this.ca) > -1) && ([3, 6, 7].indexOf(this.thal) > -1)
+        return ([0, 1, 2, 3].indexOf(this.ca) > -1) && ([3, 6, 7].indexOf(this.thal) > -1) && (this.oldpeak >= 0) && ([1, 2, 3].indexOf(this.slope) > -1)
     }
 
     advance() {

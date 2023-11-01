@@ -10,6 +10,25 @@
     </a>
 </div>
 <div class="wrapper">
+    <h5>My ST depression during excersise is...</h5>
+    <p class="oldpeak">
+        <input type="number" name="oldpeak" id="oldpeak" placeholder="0.8" [(ngModel)]="oldpeak"> greater relative to rest
+    </p>
+    <h5>The slope of my ST segment during excersise is...</h5>
+    <p class="slope">
+        <label class="radiogroup">
+            <input type="radio" name="slope" id="up" [value]="1" [(ngModel)]="slope">
+            <label for="up">Upsloping</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="slope" id="flat" [value]="2" [(ngModel)]="slope">
+            <label for="flat">Flat</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="slope" id="down" [value]="3" [(ngModel)]="slope">
+            <label for="down">Downsloping</label>
+        </label>
+    </p>
     <h3>During flouroscopy...</h3>
     <p class="ca">
         <label class="radiogroup">

@@ -1,20 +1,33 @@
-<div class="header">
-    <h1>Your heart under pressure</h1>
-    <a id="back" routerLink="../../home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="27.243" height="27.243" viewBox="0 0 47.243 47.243">
-            <g id="x_1_" data-name="x(1)" transform="translate(-3.699 -3.699)">
-              <line id="Line_2" data-name="Line 2" x1="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-              <line id="Line_3" data-name="Line 3" x2="43" y2="43" transform="translate(5.821 5.821)" fill="none" stroke="#6a747a" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-            </g>
-          </svg>                  
-    </a>
-</div>
+<h1>Your lifestyle</h1>
 <div class="wrapper">
-    <h3>My maximum achieved heartrate is..</h3>
+    <h5>How often do you excersise?</h5>
+    <p class="ex">
+        <label class="radiogroup">
+            <input type="radio" name="exang" id="1">
+            <label for="1">Every day</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="exang" id="2">
+            <label for="2">Multiple time a week</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="exang" id="3">
+            <label for="3">Once a week</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="exang" id="4">
+            <label for="4">Once a month</label>
+        </label>
+        <label class="radiogroup">
+            <input type="radio" name="exang" id="4">
+            <label for="4">Less than once a month</label>
+        </label>
+    </p>
+    <h5>Your maximum heartrate while exercising</h5>
     <p class="thalach">
         <input type="number" name="thalach" id="thalach" placeholder="133" [(ngModel)]="thalach"> bpm
     </p>
-    <h3>I have suffered from an excersise-induced angina</h3>
+    <h5>Have you experienced chest pains while excercising</h5>
     <p class="exang">
         <label class="radiogroup">
             <input type="radio" name="exang" id="yes" [value]="1" [(ngModel)]="exang">
@@ -25,32 +38,33 @@
             <label for="no">No</label>
         </label>
     </p>
-    <h3>My ST depression during excersise is...</h3>
-    <p class="oldpeak">
-        <input type="number" name="oldpeak" id="oldpeak" placeholder="0.8" [(ngModel)]="oldpeak"> greater relative to rest
+    <h5>How much water do drink regularly?</h5>
+    <p class="water">
+        <input type="number" name="water" id="alcohol" placeholder="3"> glasses a day
     </p>
-    <h3>The slope of my ST segment during excersise is...</h3>
-    <p class="slope">
+    <h5>Do you smoke?</h5>
+    <p class="smoke">
         <label class="radiogroup">
-            <input type="radio" name="slope" id="up" [value]="1" [(ngModel)]="slope">
-            <label for="up">Upsloping</label>
+            <input type="radio" name="smoke" id="yes">
+            <label for="yes">Yes</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="slope" id="flat" [value]="2" [(ngModel)]="slope">
-            <label for="flat">Flat</label>
+            <input type="radio" name="smoke" id="no">
+            <label for="no">No</label>
         </label>
         <label class="radiogroup">
-            <input type="radio" name="slope" id="down" [value]="3" [(ngModel)]="slope">
-            <label for="down">Downsloping</label>
+            <input type="radio" name="smoke" id="past">
+            <label for="past">I have quit smoking</label>
         </label>
+    </p>
+    <h5>How much alcohol do you consume?</h5>
+    <p class="alcohol">
+        <input type="number" name="alcohol" id="alcohol" placeholder="7"> glasses a week
     </p>
 </div>
-<button id="continue" class="button-hollow" [routerLink]="'../extra'" (click)="advance()" [disabled]="!valid()">
+<button id="continue" class="button-hollow" [routerLink]="'../extra'" (click)="advance()">
     Continue
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17.243" viewBox="0 0 39 35.243">
-        <g id="arrow-right" transform="translate(-3.5 -2.879)">
-          <line id="Line_1" data-name="Line 1" x2="35.707" transform="translate(5 21)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-          <path id="Path_4" data-name="Path 4" d="M12,5,27.5,20.5,12,36" transform="translate(13.5 0)" fill="none" stroke="#303335" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-        </g>
-      </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12.021" height="12.021" viewBox="0 0 12.021 12.021">
+        <path id="Path_24" data-name="Path 24" d="M16,9.414,7.4,18.021,5.983,16.607,14.59,8H7V6H18V17H16Z" transform="translate(-5.983 -6)" fill="color"/>
+    </svg>
 </button>

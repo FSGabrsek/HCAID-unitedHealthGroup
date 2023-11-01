@@ -19,8 +19,8 @@ export class DataService {
         this.formdata.set_info(cp, trestbpm, chol)
     }
 
-    save_tests(thalach: number, exang: number, oldpeak: number, slope: number) {
-        this.formdata.set_tests(thalach, exang, oldpeak, slope)
+    save_tests(thalach: number, exang: number) {
+        this.formdata.set_tests(thalach, exang)
     }
 
     save_extra(ca: number, thal: number) {
