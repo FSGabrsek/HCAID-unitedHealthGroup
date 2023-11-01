@@ -9,11 +9,13 @@ import { SectionTestsComponent } from './features/page-form/sections/section-tes
 import { SectionExtraComponent } from './features/page-form/sections/section-extra/section-extra.component';
 import { PageOnboardingComponent } from './features/page-onboarding/page-onboarding.component';
 import { SectionAidComponent } from './features/page-form/sections/section-aid/section-aid.component';
+import { PageResultsComponent } from './features/page-results/page-results.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'prefix' },
     { path: 'home', component: PageHomeComponent },
     { path: 'disclaimer', component: PageDisclaimerComponent },
+    { path: 'onboarding', component: PageOnboardingComponent },
     { path: 'form', component: PageFormComponent, children: [
         { path: '', redirectTo: 'personal', pathMatch: 'full' },
         { path: 'personal', component: SectionPersonalComponent },
@@ -23,8 +25,7 @@ const routes: Routes = [
         { path: 'extra', component: SectionExtraComponent },
         ]
     },
-    { path: 'onboarding', component: PageOnboardingComponent },
-
+    { path: 'results', component: PageResultsComponent },
 ];
 
 @NgModule({

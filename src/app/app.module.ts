@@ -14,6 +14,7 @@ import { SectionExtraComponent } from './features/page-form/sections/section-ext
 import { HeaderComponent } from './core/components/header/header.component';
 import { PageOnboardingComponent } from './features/page-onboarding/page-onboarding.component';
 import { SectionAidComponent } from './features/page-form/sections/section-aid/section-aid.component';
+import { PageResultsComponent } from './features/page-results/page-results.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SectionAidComponent } from './features/page-form/sections/section-aid/s
     HeaderComponent,
     PageOnboardingComponent,
     SectionAidComponent,
+    PageResultsComponent,
   ],
   imports: [
     BrowserModule,
