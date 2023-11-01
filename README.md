@@ -1,3 +1,3 @@
-# HeartRiskCheckup
+# UnitedHealthCare
 
 UnitedHealthCare is a health insurance company's tool for calculating whether a person is worth insuring, and offering the best insurance rates to maximize profits if a person isn't at risk of a medical emergency. UnitedHealthCare uses medical information to predict whether a person is at risk of suffering a heart attack and calculates increasingly high premiums based on the confidence level, or deems the person too great a risk to insure. It also stores a user's medical records in addition to various other personal details (name, phone number, email) to further advertise to the user, or sell the info to third parties. The service offers the legal minimum amount of explanation and uses vague and complicated language to deceive the user into thinking they have been offered a fair deal.
