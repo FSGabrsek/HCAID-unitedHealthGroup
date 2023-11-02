@@ -27,10 +27,6 @@ export class PageResultsComponent {
     }
 
     premium(): number {
-        console.log(Math.round(this.alpha * ((this.prediction * (1 + this.confidence) * this.base) + ((1 - this.prediction) * (2 - this.confidence) * this.base))));
-        console.log(this.prediction);
-        console.log(this.confidence);
-
         return Math.round(this.alpha * ((this.prediction * (1 + this.confidence) * this.base) + ((1 - this.prediction) * (2 - this.confidence) * this.base)))
     }
 }
