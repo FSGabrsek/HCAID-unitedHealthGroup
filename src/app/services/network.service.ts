@@ -27,6 +27,6 @@ export class NetworkService {
             thal: data.thal
         }
 
-        return this.http.post(`${this.APIUrl}/predictEvil`, body)
+        return this.http.post(`${this.APIUrl}/predict`, body)
     }
 }

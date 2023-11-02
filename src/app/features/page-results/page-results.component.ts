@@ -22,11 +22,15 @@ export class PageResultsComponent {
         this.networkService.postPredictGood(this.dataService.formdata)
             .subscribe((result: any) => {
                 this.prediction = result.prediction
-                this.confidence = Math.round(result.voting_confidence)
+                this.confidence = result.voting_confidence
             })
     }
 
     premium(): number {
+        console.log(Math.round(this.alpha * ((this.prediction * (1 + this.confidence) * this.base) + ((1 - this.prediction) * (2 - this.confidence) * this.base))));
+        console.log(this.prediction);
+        console.log(this.confidence);
+
         return Math.round(this.alpha * ((this.prediction * (1 + this.confidence) * this.base) + ((1 - this.prediction) * (2 - this.confidence) * this.base)))
     }
 }
