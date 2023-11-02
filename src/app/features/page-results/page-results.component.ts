@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
+import { NetworkService } from 'src/app/services/network.service';
 
 @Component({
   selector: 'app-page-results',
@@ -9,9 +11,26 @@ export class PageResultsComponent {
     base = 225
     alpha = 1.0
     prediction = 0
-    voting_confidence = 0
+    confidence = 0
+
+    constructor(
+        private dataService: DataService,
+        private networkService: NetworkService
+    ) {}
+
+    ngOnInit() {
+        this.networkService.postPredictGood(this.dataService.formdata)
+            .subscribe((result: any) => {
+                this.prediction = result.prediction
+                this.confidence = result.voting_confidence
+            })
+    }
 
     premium(): number {
-        return Math.round(this.alpha * ((this.prediction * (1 + this.voting_confidence) * this.base) + ((1 - this.prediction) * (2 - this.voting_confidence) * this.base)))
+        console.log(Math.round(this.alpha * ((this.prediction * (1 + this.confidence) * this.base) + ((1 - this.prediction) * (2 - this.confidence) * this.base))));
+        console.log(this.prediction);
+        console.log(this.confidence);
+
+        return Math.round(this.alpha * ((this.prediction * (1 + this.confidence) * this.base) + ((1 - this.prediction) * (2 - this.confidence) * this.base)))
     }
 }
