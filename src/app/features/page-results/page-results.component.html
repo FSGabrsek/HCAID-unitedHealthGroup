@@ -1,7 +1,7 @@
 <div class="container">
     <div class="wrapper">
         <h1>Your Personal Care Plan</h1>
-        <div class="hero">
+        <div class="hero" *ngIf="prediction != -1">
             <h2 class="subhead">You can be insured starting at</h2>
             <span id="result" class="font_weight-bold font_size-header">${{premium()}} /month*</span>
             <p>Make the smartest choice for your health - Based on your needs, UnitedHealth Group can offer you an insurance package that covers all your needs at the lowest rates!</p>
@@ -15,6 +15,7 @@
                 </a>
             </h3>
         </div>
+        <h1 id="loading" *ngIf="prediction == -1">Please wait while we process your healthcare plan</h1>
         <button id="return" class="button-hollow" [routerLink]="''">
             Return
             <svg xmlns="http://www.w3.org/2000/svg" width="12.021" height="12.021" viewBox="0 0 12.021 12.021">
