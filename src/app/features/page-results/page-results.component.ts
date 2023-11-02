@@ -10,7 +10,7 @@ import { NetworkService } from 'src/app/services/network.service';
 export class PageResultsComponent {
     base = 225
     alpha = 1.0
-    prediction = 0
+    prediction = -1
     confidence = 0
 
     constructor(
