@@ -15,6 +15,7 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { PageOnboardingComponent } from './features/page-onboarding/page-onboarding.component';
 import { SectionAidComponent } from './features/page-form/sections/section-aid/section-aid.component';
 import { PageResultsComponent } from './features/page-results/page-results.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { PageResultsComponent } from './features/page-results/page-results.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
